@@ -11,15 +11,10 @@ for i, b in enumerate(text):
     if num == -1:
         print(i)
         break
-
-d = open('input.2', 'w')
-n = str(i)
+a = i
+d = open('output.2', 'w')
+n = str(a)
 d.write(n)
 
 d.close()
 k.close()
-
-
-
-
-
