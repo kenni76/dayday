@@ -5,23 +5,27 @@ good = 0
 
 for z in spisok:
 
-    sound = 0
-    sound2 = 0
-    verty = 0
+    good1 = 0
+    good2 = 0
+    notgood = 0
 
     for q in z:
-        if q == 'a' or 'e' or 'i' or 'u' or 'o':
-            sound += 1
+        if q in ['a', 'i', 'o', 'u', 'e']:
+            good1 += 1
     for i in range(len(z) - 1):
         if z[i] == z[i + 1]:
-            sound2 += 1
-    for qws in ['ab', 'cd', 'pq', 'xy']:
-        if qws in z:
-            verty += 1
-    if sound >= 3 and sound2 >= 1 and verty == 0:
+            good2 += 1
+    for b in ['ab', 'cd', 'pq', 'xy']:
+        if b in z:
+            notgood += 1
+    if good1 >= 3 and good2 >= 1 and notgood == 0:
         good += 1
 
-print(good)
+output1 = open('out1put1','w')
+output1.write(str(good))
+
+k.close
+output1.close
 
 
 
